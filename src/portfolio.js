@@ -14,8 +14,7 @@ const greeting = {
   logo_name: "Rohit Baghel",
   // nickname: "harry / picleric",
   full_name: "Rohit Baghel",
-  subTitle:
-    "Full Stack Developer, Open Source Enthusiast, Life Long Learner.",
+  subTitle: "Full Stack Developer, Open Source Enthusiast, Life Long Learner.",
   resumeLink:
     "https://drive.google.com/file/d/18ACqxbMTbVoII7xIN7eib_Mo8eGdgVKd/view?usp=sharing",
   mail: "baghel.rohit99@gmail.com",
@@ -29,7 +28,7 @@ const socialMediaLinks = {
   // gitlab: "https://gitlab.com/harikanani",
   facebook: "https://www.facebook.com/Aashu.Baghel11",
   twitter: "#",
-  instagram: "https://www.instagram.com/official_gadariya01/",
+  instagram: "#",
 };
 
 const skills = {
@@ -40,7 +39,6 @@ const skills = {
       skills: [
         "⚡ Develop highly interactive User Interfaces and Backend for web applications",
         "⚡ Building responsive website front end using ReactJS,Tailwindcss",
-       
       ],
       softwareSkills: [
         {
@@ -79,7 +77,7 @@ const skills = {
             color: "#61DAFB",
           },
         },
-     
+
         {
           skillName: "NPM",
           fontAwesomeClassname: "simple-icons:npm",
@@ -87,7 +85,7 @@ const skills = {
             color: "#CB3837",
           },
         },
-       
+
         {
           skillName: "Git",
           fontAwesomeClassname: "simple-icons:git",
@@ -143,7 +141,7 @@ const skills = {
             color: "#47A248",
           },
         },
-           {
+        {
           skillName: "NodeJS",
           fontAwesomeClassname: "simple-icons:node-dot-js",
           style: {
@@ -157,7 +155,6 @@ const skills = {
             color: "#339933",
           },
         },
-      
       ],
     },
   ],
@@ -193,7 +190,8 @@ const projects = {
     {
       id: "0",
       name: "NordStorm.com",
-      url: "https://maheshvaitla.github.io/Project_NordStorm/html/landingpage.html",
+      url:
+        "https://maheshvaitla.github.io/Project_NordStorm/html/landingpage.html",
       description:
         " NordStorm is an American luxury department store chain, specializes in manufacturing and selling urban style clothing and accessories. The brand uses the US popular culture in its product design.",
       languages: [
@@ -211,9 +209,8 @@ const projects = {
         },
         {
           name: "Bootstrap",
-          iconifyClass:"simple-icons:bootstrap",
+          iconifyClass: "simple-icons:bootstrap",
         },
-        
       ],
     },
     {
@@ -245,9 +242,45 @@ const projects = {
         },
         {
           name: "ejs",
-          iconifyClass: "logos-ejs",
+          iconifyClass: "simple-icons:ejs",
         },
-
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "2",
+      name: "Bookmyshow",
+      url: "bookmyshow03.netlify.app",
+      description:
+        "An E-commerce web application to book movie tickets, make advance bookings for movies, buy play tickets, event tickets and sport tickets. watch movie videos and trailer etc. ",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "MongoDB",
+          iconifyClass: "logos-mongodb",
+        },
+        {
+          name: "Express",
+          iconifyClass: "logos-express",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
       ],
     },
   ],
