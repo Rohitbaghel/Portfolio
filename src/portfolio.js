@@ -253,7 +253,7 @@ const projects = {
     {
       id: "2",
       name: "Bookmyshow",
-      url: "bookmyshow03.netlify.app",
+      url: "https://bookmyshow03.netlify.app/",
       description:
         "An E-commerce web application to book movie tickets, make advance bookings for movies, buy play tickets, event tickets and sport tickets. watch movie videos and trailer etc. ",
       languages: [
