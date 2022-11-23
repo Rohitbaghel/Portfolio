@@ -283,6 +283,138 @@ const projects = {
         },
       ],
     },
+    {
+      id: "3",
+      name: "Token Airdrop",
+      url: "",
+      description:
+        "An web3 dApp which is used for dropping tokens from the admins account to the users by using web3 functionality and actions.",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "nextjs",
+          iconifyClass: "logos-nextjs",
+        },
+        {
+          name: "Typescript",
+          iconifyClass: "logos-typescript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Token supplier",
+      url: "",
+      description:
+        "An web3 dApp which is used for accounting the data of the token which are created to blockchain.it contain data of minted token,total supply and other sections.it is also used for verifying.",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "nextjs",
+          iconifyClass: "logos-nextjs",
+        },
+        {
+          name: "Typescript",
+          iconifyClass: "logos-typescript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Web3 Citadel",
+      url: "",
+      description:
+        "An website which is used for getting information of interested clients and used for providing them information about all the works and services",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "nextjs",
+          iconifyClass: "logos-nextjs",
+        },
+        {
+          name: "Typescript",
+          iconifyClass: "logos-typescript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Mint App",
+      url: "",
+      description:
+        "An Web3 dApp which has all the features like minting,token creation,NFT creation, and features which are present in full fledged dApp.",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "nextjs",
+          iconifyClass: "logos-nextjs",
+        },
+        {
+          name: "Typescript",
+          iconifyClass: "logos-typescript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
   ],
 };
 
