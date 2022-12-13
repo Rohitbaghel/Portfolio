@@ -12,7 +12,6 @@ const greeting = {
   title: "Hello 👋.",
   title2: "Rohit Baghel",
   logo_name: "Rohit Baghel",
-  // nickname: "harry / picleric",
   full_name: "Rohit Baghel",
   subTitle: "Full Stack Developer, Open Source Enthusiast, Life Long Learner.",
   resumeLink:
@@ -408,6 +407,136 @@ const projects = {
         {
           name: "Typescript",
           iconifyClass: "logos-typescript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "4",
+      name: "Github Profile Finder",
+      url: "https://github.com/Rohitbaghel/github-profile-finder",
+      description:
+        "Github Profile Finder where you can find the Profile photo of Github Users",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "4",
+      name: "Nord Finance User Table",
+      url: "https://github.com/Rohitbaghel/nord-finance",
+      description:
+        "A React with Antd Table with pagination and searching Functionality ",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+      ],
+    },
+    {
+      id: "6",
+      name: "Chat App",
+      url: "https://github.com/Rohitbaghel/chat-app",
+      description: "A React chat App with express and Socket.io ",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+        {
+          name: "Express",
+          iconifyClass: "logos-express",
+        },
+      ],
+    },
+    {
+      id: "8",
+      name: "Game of Thrones card ",
+      url: "https://github.com/Rohitbaghel/radarr-Frontend",
+      description: "An Game of thrones character showing app",
+      languages: [
+        {
+          name: "React",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
+        },
+        {
+          name: "Tailwindcss",
+          iconifyClass: "simple-icons:tailwindcss",
+        },
+        {
+          name: "redux",
+          iconifyClass: "logos-redux",
+        },
+      ],
+    },
+    {
+      id: "9",
+      name: "Snake Game ",
+      url: "https://github.com/Rohitbaghel/hunger-games",
+      description: "Snake game in js",
+      languages: [
+        {
+          name: "CSS3",
+          iconifyClass: "vscode-icons:file-type-css",
+        },
+        {
+          name: "Html",
+          iconifyClass: "vscode-icons:file-type-html",
+        },
+        {
+          name: "JavaScript",
+          iconifyClass: "logos-javascript",
         },
         {
           name: "Tailwindcss",
