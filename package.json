@@ -4,12 +4,13 @@
   "homepage": "https://rohitbaghel.in",
   "version": "2.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build && cp build/index.html build/404.html",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^4.6.2",
@@ -24,7 +25,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "gh-pages": "^6.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
