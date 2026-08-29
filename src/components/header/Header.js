@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { Fade } from "react-reveal";
+import Fade from "../Fade/Fade";
 import { NavLink } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import { CgSun } from "react-icons/cg/";

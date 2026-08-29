@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectLanguages from "../projectLanguages/ProjectLanguages";
 import "./ProjectCard.css";
-import { Fade } from "react-reveal";
+import Fade from "../Fade/Fade";
 import { style } from "glamor";
 
 export default function ProjectCard({ repo, theme }) {

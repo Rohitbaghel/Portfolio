@@ -1,7 +1,7 @@
 import React from "react";
 import "./Skills.css";
 import { skills } from "../../portfolio";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 
 export default function SkillSection(props) {
   const theme = props.theme;

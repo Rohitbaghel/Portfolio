@@ -1,6 +1,6 @@
 import React from "react";
 import "./Achievements.css";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 import { achievements } from "../../portfolio";
 
 export default function Achievements(props) {

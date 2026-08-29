@@ -2,7 +2,7 @@ import React from "react";
 import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 import FeelingProud from "./FeelingProud";
 import { style } from "glamor";
 

@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import BlogsImg from "./BlogsImg";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 import { style } from "glamor";

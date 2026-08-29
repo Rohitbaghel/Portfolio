@@ -1,6 +1,6 @@
 import React from "react";
 import "./Education.css";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 import { education } from "../../portfolio";
 
 export default function Education(props) {

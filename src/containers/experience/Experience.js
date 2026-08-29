@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experience.css";
-import { Fade } from "react-reveal";
+import Fade from "../../components/Fade/Fade";
 import { experience } from "../../portfolio";
 
 function CompanyName({ exp, theme }) {
