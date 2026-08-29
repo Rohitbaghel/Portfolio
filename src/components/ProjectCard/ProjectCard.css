@@ -1,3 +1,12 @@
+.project-card--clickable:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 15px;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid #fc1056;
+  outline-offset: 2px;
+}
+
 .repo-stats {
   display: flex;
   justify-content: space-between;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Main from "./containers/Main";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import { ThemeProvider } from "styled-components";
 import { themes } from "./theme";
 import { GlobalStyles } from "./global";
@@ -13,7 +14,9 @@ function App() {
       <>
         <GlobalStyles />
         <div>
-          <Main theme={themes[theme]} setTheme={setTheme} />
+          <ErrorBoundary>
+            <Main theme={themes[theme]} setTheme={setTheme} />
+          </ErrorBoundary>
         </div>
       </>
     </ThemeProvider>

@@ -173,18 +173,6 @@
   color: #ffffff !important;
 }
 
-.cr {
-  margin: 2px 5px 20px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-.cr:hover {
-  box-shadow: 0 1px 10px #47a148;
-  background-color: #47a148;
-  color: #ffffff !important;
-}
-
 .resume-nav {
   margin: 2px 5px 20px;
   transition: all 0.2s ease-in-out;

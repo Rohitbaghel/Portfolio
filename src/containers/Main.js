@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
-import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 
@@ -38,7 +37,7 @@ function Main(props) {
           </>
         )}
         <Route path="/projects" render={renderPage(Projects)} />
-        <Route path="/contact" render={renderPage(Contact)} />
+        <Redirect from="/contact" to="/" />
         <Redirect from="/project" to="/projects" />
       </Switch>
     </BrowserRouter>

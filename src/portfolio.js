@@ -262,20 +262,6 @@ const projectsHeader = {
     "Selected systems shipped end to end — trading automation, commerce agents, and storefronts.",
 };
 
-const contactPageData = {
-  contactSection: {
-    title: "Contact Me",
-    profile_image_path: "profile_photo_2.JPG",
-    description:
-      "Reach out via GitHub, LinkedIn, or email.",
-  },
-  blogSection: {
-    title: "Blogs",
-    subtitle: "Technical write-ups and project notes on Medium.",
-    link: "https://medium.com/@baghel.rohit99",
-  },
-};
-
 const projects = {
   data: [
     {
@@ -328,6 +314,5 @@ export {
   skills,
   education,
   projectsHeader,
-  contactPageData,
   projects,
 };

@@ -98,16 +98,6 @@ function Header(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink
-                className="cr"
-                to="/contact"
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ borderRadius: 5, color: theme.text }}
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li>
               <a
                 className="resume-nav"
                 href={greeting.resumeLink}

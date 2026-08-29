@@ -2,7 +2,6 @@ import React from "react";
 import ProjectLanguages from "../projectLanguages/ProjectLanguages";
 import "./ProjectCard.css";
 import Fade from "../Fade/Fade";
-import { style } from "glamor";
 
 export default function ProjectCard({ repo, theme }) {
   const demoUrl = repo.url;
@@ -23,7 +22,7 @@ export default function ProjectCard({ repo, theme }) {
     }
   }
 
-  const cardStyles = style({
+  const cardStyle = {
     color: theme.text,
     backgroundColor: theme.projectCard,
     boxShadow: "rgba(0, 0, 0, 0.2) 0px 10px 30px -15px",
@@ -32,52 +31,58 @@ export default function ProjectCard({ repo, theme }) {
     borderRadius: "5px",
     height: "100%",
     transition: "all 0.2s ease-in-out",
-    ":hover": isClickable
-      ? {
-          boxShadow: `${theme.imageDark} 0 2px 15px`,
-        }
-      : {},
-    ":focus-visible": {
-      outline: `2px solid ${theme.accentBright}`,
-      outlineOffset: "2px",
-    },
-  });
+  };
 
-  const CardWrapper = isClickable ? "div" : "article";
+  const cardProps = {
+    className: `project-card${isClickable ? " project-card--clickable" : ""}`,
+    style: cardStyle,
+    onClick: isClickable ? handleClick : undefined,
+    onKeyDown: isClickable ? handleKeyDown : undefined,
+    role: isClickable ? "link" : undefined,
+    tabIndex: isClickable ? 0 : undefined,
+  };
 
   return (
     <div>
       <Fade bottom duration={2000} distance="40px">
-        <CardWrapper
-          {...cardStyles}
-          onClick={isClickable ? handleClick : undefined}
-          onKeyDown={isClickable ? handleKeyDown : undefined}
-          role={isClickable ? "link" : undefined}
-          tabIndex={isClickable ? 0 : undefined}
-        >
-          <div className="repo-name-div">
-            <h3 className="repo-name" style={{ color: theme.text }}>
-              {repo.name}
-            </h3>
-            {!isClickable && repo.output && (
-              <span className="repo-badge" style={{ color: theme.secondaryText }}>
-                Shipped
-              </span>
-            )}
+        {isClickable ? (
+          <div {...cardProps}>
+            <ProjectCardContent repo={repo} theme={theme} isClickable={isClickable} />
           </div>
-          <p className="repo-description" style={{ color: theme.text }}>
-            {repo.description}
-          </p>
-          {repo.output && (
-            <p className="repo-output" style={{ color: theme.accentColor }}>
-              <strong>OUTPUT:</strong> {repo.output}
-            </p>
-          )}
-          <div className="repo-details">
-            <ProjectLanguages logos={repo.languages} />
-          </div>
-        </CardWrapper>
+        ) : (
+          <article {...cardProps}>
+            <ProjectCardContent repo={repo} theme={theme} isClickable={isClickable} />
+          </article>
+        )}
       </Fade>
     </div>
+  );
+}
+
+function ProjectCardContent({ repo, theme, isClickable }) {
+  return (
+    <>
+      <div className="repo-name-div">
+        <h3 className="repo-name" style={{ color: theme.text }}>
+          {repo.name}
+        </h3>
+        {!isClickable && repo.output && (
+          <span className="repo-badge" style={{ color: theme.secondaryText }}>
+            Shipped
+          </span>
+        )}
+      </div>
+      <p className="repo-description" style={{ color: theme.text }}>
+        {repo.description}
+      </p>
+      {repo.output && (
+        <p className="repo-output" style={{ color: theme.accentColor }}>
+          <strong>OUTPUT:</strong> {repo.output}
+        </p>
+      )}
+      <div className="repo-details">
+        <ProjectLanguages logos={repo.languages} />
+      </div>
+    </>
   );
 }
