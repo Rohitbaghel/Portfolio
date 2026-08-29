@@ -1,0 +1,56 @@
+.education-header-div {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.education-header {
+  font-size: 60px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  margin: 0;
+}
+
+.education-body-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.education-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+}
+
+.education-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.education-degree {
+  font-size: 20px;
+  font-family: "Google Sans Bold";
+  margin: 0;
+}
+
+.education-date {
+  font-size: 14px;
+  font-family: "Google Sans Regular";
+  white-space: nowrap;
+}
+
+.education-school {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .education-header {
+    font-size: 32px;
+  }
+}

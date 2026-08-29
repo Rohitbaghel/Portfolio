@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Fade } from "react-reveal";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import { CgSun } from "react-icons/cg/";
 import { HiMoon } from "react-icons/hi";
@@ -31,20 +31,19 @@ function Header(props) {
     },
   });
 
-  const link = settings.isSplash ? "/splash" : "home";
+  const link = settings.isSplash ? "/splash" : "/";
 
-  const [currTheme, setCurrTheme] = useState(props.theme);
+  const [currTheme, setCurrTheme] = useState(props.theme.name);
+
+  useEffect(() => {
+    setCurrTheme(props.theme.name);
+  }, [props.theme.name]);
 
   function changeTheme() {
-    if (currTheme === "light") {
-      props.setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      setCurrTheme("dark");
-    } else {
-      props.setTheme("light");
-      localStorage.setItem("theme", "light");
-      setCurrTheme("light");
-    }
+    const nextTheme = currTheme === "light" ? "dark" : "light";
+    props.setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    setCurrTheme(nextTheme);
   }
 
   const icon =
@@ -65,8 +64,8 @@ function Header(props) {
   return (
     <Fade top duration={1000} distance="20px">
       <div>
-        <header className="header">
-          <NavLink to={link} tag={Link} className="logo">
+        <header className="header" style={{ backgroundColor: theme.body }}>
+          <NavLink to={link} className="logo">
             <span style={{ color: theme.text }}></span>
             <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
@@ -74,15 +73,14 @@ function Header(props) {
             <span style={{ color: theme.text }}></span>
           </NavLink>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
-          <label className="menu-icon" htmlFor="menu-btn">
+          <label className="menu-icon" htmlFor="menu-btn" aria-label="Open navigation menu">
             <span className="navicon"></span>
           </label>
           <ul className="menu">
             <li>
               <NavLink
                 className="homei"
-                to="/home"
-                tag={Link}
+                to="/"
                 activeStyle={{ fontWeight: "bold" }}
                 style={{ borderRadius: 5, color: theme.text }}
               >
@@ -93,7 +91,6 @@ function Header(props) {
               <NavLink
                 className="projects"
                 to="/projects"
-                tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
                 style={{ borderRadius: 5, color: theme.text }}
               >
@@ -104,12 +101,21 @@ function Header(props) {
               <NavLink
                 className="cr"
                 to="/contact"
-                tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
                 style={{ borderRadius: 5, color: theme.text }}
               >
-                Contact and Resume
+                Contact
               </NavLink>
+            </li>
+            <li>
+              <a
+                className="resume-nav"
+                href={greeting.resumeLink}
+                download={greeting.resumeFileName}
+                style={{ borderRadius: 5, color: theme.text }}
+              >
+                Résumé
+              </a>
             </li>
             <button {...styles} onClick={changeTheme}>
               {icon}

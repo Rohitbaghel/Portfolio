@@ -7,6 +7,7 @@ import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 import { style } from "glamor";
+import profilePhoto from "../../assests/images/profile_photo_2.JPG";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
@@ -30,8 +31,8 @@ function Contact(props) {
             <div className="contact-heading-img-div">
               <img
                 className="profile-pic"
-                src={require(`../../assests/images/${ContactData["profile_image_path"]}`)}
-                alt=""
+                src={profilePhoto}
+                alt="Rohit Baghel profile"
               />
             </div>
             <div className="contact-heading-text-div">
@@ -50,8 +51,13 @@ function Contact(props) {
               <SocialMedia />
               <br />
               <br />
-              <a {...styles} className="general-btn" href={greeting.resumeLink}>
-                See my Resume
+              <a
+                {...styles}
+                className="general-btn"
+                href={greeting.resumeLink}
+                download={greeting.resumeFileName}
+              >
+                Download Résumé
               </a>
             </div>
           </div>

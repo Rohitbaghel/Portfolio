@@ -1,125 +1,48 @@
 import React from "react";
-import { Route, Switch, HashRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
-// import Education from "../pages/education/EducationComponent";
-// import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 
-export default function Main(propss) {
-  if (settings.isSplash) {
-    return (
-      <div>
-        <HashRouter basename="/">
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={(props) => (
-                <Splash
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-            <Route
-              path="/home"
-              render={(props) => (
-                <Home
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-
-            <Route
-              path="/contact"
-              render={(props) => (
-                <Contact
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-            <Route
-              path="/splash"
-              render={(props) => (
-                <Splash
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-            <Route
-              path="/projects"
-              render={(props) => (
-                <Projects
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-          </Switch>
-        </HashRouter>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <HashRouter basename="/">
-          <Switch>
-            <Route
-              path="/"
-              exact
-              render={(props) => (
-                <Home
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-            <Route
-              path="/home"
-              render={(props) => (
-                <Home
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-
-            <Route
-              path="/contact"
-              render={(props) => (
-                <Contact
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-            <Route
-              path="/projects"
-              render={(props) => (
-                <Projects
-                  {...props}
-                  theme={propss.theme}
-                  setTheme={propss.setTheme}
-                />
-              )}
-            />
-          </Switch>
-        </HashRouter>
-      </div>
-    );
+function getBasename() {
+  const base = import.meta.env.BASE_URL;
+  if (!base || base === "/") {
+    return undefined;
   }
+  return base.replace(/\/$/, "");
 }
+
+function Main(props) {
+  const pageProps = { theme: props.theme, setTheme: props.setTheme };
+
+  const renderPage = (Component) => (routeProps) => (
+    <Component {...routeProps} {...pageProps} />
+  );
+
+  return (
+    <BrowserRouter basename={getBasename()}>
+      <Switch>
+        {settings.isSplash ? (
+          <>
+            <Route path="/" exact render={renderPage(Splash)} />
+            <Route path="/splash" render={renderPage(Splash)} />
+            <Route path="/home" render={renderPage(Home)} />
+          </>
+        ) : (
+          <>
+            <Route path="/" exact render={renderPage(Home)} />
+            <Route path="/home" render={renderPage(Home)} />
+            <Redirect from="/splash" to="/" />
+          </>
+        )}
+        <Route path="/projects" render={renderPage(Projects)} />
+        <Route path="/contact" render={renderPage(Contact)} />
+        <Redirect from="/project" to="/projects" />
+      </Switch>
+    </BrowserRouter>
+  );
+}
+
+export default Main;

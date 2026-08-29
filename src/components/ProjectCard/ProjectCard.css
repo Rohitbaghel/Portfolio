@@ -1,13 +1,11 @@
 .repo-stats {
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
   font-size: 13px;
   color: rgb(106, 115, 125);
 }
 
 .repo-left-stat {
-  -webkit-box-flex: 1;
   flex-grow: 1;
   display: flex;
 }
@@ -22,14 +20,15 @@
 
 .repo-left-stat span {
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   margin-right: 0.75rem;
 }
 
 .repo-name-div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
 .repo-svg {
@@ -38,59 +37,57 @@
 }
 
 .repo-name {
-  white-space: nowrap;
-  line-height: 1.1;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.2;
   color: rgb(36, 41, 46);
-  font-family: "Google Sans Regular";
-  margin-bottom: 0.75rem;
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  overflow: hidden;
-  margin: 0px;
-}
-
-.repo-star-svg {
-  margin-right: 0.3rem;
+  font-family: "Google Sans Bold";
+  font-size: 22px;
+  margin: 0;
 }
 
 .repo-description {
   word-wrap: break-word;
   text-align: left;
-  display: -webkit-box;
   font-family: "Google Sans Regular";
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
+.repo-output {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0.75rem 0 0;
+  font-family: "Google Sans Regular";
+}
+
+.repo-output strong {
+  font-family: "Google Sans Bold";
+}
+
+.repo-badge {
+  font-size: 12px;
+  font-family: "Google Sans Regular";
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+  flex-shrink: 0;
 }
 
 .repo-details {
   display: flex;
   flex-direction: row;
-}
-
-.repo-creation-date {
-  margin: 0;
-  font-family: "Google Sans Regular";
-  font-weight: 400;
-  margin-left: 0px;
-  margin-right: auto;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
   .repo-name {
-    font-size: 16px;
+    font-size: 18px;
   }
 
-  .repo-description {
-    font-size: 14px;
-  }
-
-  .repo-details {
-    flex-direction: column;
-  }
-
-  .repo-creation-date {
+  .repo-description,
+  .repo-output {
     font-size: 14px;
   }
 }

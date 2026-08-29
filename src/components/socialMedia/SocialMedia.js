@@ -1,56 +1,60 @@
 import React from "react";
 import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio";
+import { FaGithub, FaLinkedinIn, FaGoogle, FaFacebookF } from "react-icons/fa";
 
-export default function socialMedia() {
+const socialLinks = [
+  {
+    key: "github",
+    href: socialMediaLinks.github,
+    label: "GitHub",
+    className: "github",
+    Icon: FaGithub,
+  },
+  {
+    key: "linkedin",
+    href: socialMediaLinks.linkedin,
+    label: "LinkedIn",
+    className: "linkedin",
+    Icon: FaLinkedinIn,
+  },
+  {
+    key: "gmail",
+    href: socialMediaLinks.gmail ? `mailto:${socialMediaLinks.gmail}` : null,
+    label: "Email",
+    className: "google",
+    Icon: FaGoogle,
+  },
+  {
+    key: "facebook",
+    href: socialMediaLinks.facebook,
+    label: "Facebook",
+    className: "facebook",
+    Icon: FaFacebookF,
+  },
+];
+
+function isValidLink(href) {
+  return href && href !== "#" && href.trim() !== "";
+}
+
+export default function SocialMedia() {
   return (
     <div className="social-media-div">
-      <a
-        href={socialMediaLinks.github}
-        className="icon-button github"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-github"></i>
-        <span></span>
-      </a>
-   
-      <a
-        href={socialMediaLinks.linkedin}
-        className="icon-button linkedin"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-linkedin-in"></i>
-        <span></span>
-      </a>
-      <a
-        href={`mailto:${socialMediaLinks.gmail}`}
-        className="icon-button google"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-google"></i>
-        <span></span>
-      </a>
-      <a
-        href={socialMediaLinks.twitter}
-        className="icon-button twitter"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-twitter"></i>
-        <span></span>
-      </a>
-      <a
-        href={socialMediaLinks.instagram}
-        className="icon-button instagram"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-instagram"></i>
-        <span></span>
-      </a>
+      {socialLinks
+        .filter((link) => isValidLink(link.href))
+        .map(({ key, href, label, className, Icon }) => (
+          <a
+            key={key}
+            href={href}
+            className={`icon-button ${className}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+          >
+            <Icon aria-hidden="true" />
+          </a>
+        ))}
     </div>
   );
 }

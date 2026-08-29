@@ -1,0 +1,110 @@
+.experience-header-div {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience-header {
+  font-size: 60px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  margin: 0;
+}
+
+.experience-body-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.experience-card {
+  padding: 1.5rem 1.75rem;
+  border-radius: 8px;
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience-role {
+  font-size: 24px;
+  font-family: "Google Sans Bold";
+  margin: 0;
+}
+
+.experience-date {
+  font-size: 14px;
+  font-family: "Google Sans Regular";
+  white-space: nowrap;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.experience-company,
+.experience-company-link {
+  font-size: 18px;
+  font-family: "Google Sans Medium";
+  text-decoration: none;
+}
+
+.experience-company-link:hover,
+.experience-company-link:focus-visible {
+  text-decoration: underline;
+}
+
+.experience-location {
+  font-size: 14px;
+  font-family: "Google Sans Regular";
+}
+
+.experience-summary {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.experience-section {
+  margin-top: 1rem;
+}
+
+.experience-section-title {
+  font-size: 17px;
+  font-family: "Google Sans Medium";
+  margin: 0 0 0.5rem;
+}
+
+.experience-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.experience-list-item {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    font-size: 32px;
+  }
+
+  .experience-role {
+    font-size: 20px;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+}
