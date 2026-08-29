@@ -24,18 +24,15 @@ function Main(props) {
     <BrowserRouter basename={getBasename()}>
       <Switch>
         {settings.isSplash ? (
-          <>
-            <Route path="/" exact render={renderPage(Splash)} />
-            <Route path="/splash" render={renderPage(Splash)} />
-            <Route path="/home" render={renderPage(Home)} />
-          </>
+          <Route path="/" exact render={renderPage(Splash)} />
         ) : (
-          <>
-            <Route path="/" exact render={renderPage(Home)} />
-            <Route path="/home" render={renderPage(Home)} />
-            <Redirect from="/splash" to="/" />
-          </>
+          <Route path="/" exact render={renderPage(Home)} />
         )}
+        {settings.isSplash && (
+          <Route path="/splash" render={renderPage(Splash)} />
+        )}
+        <Route path="/home" render={renderPage(Home)} />
+        {!settings.isSplash && <Redirect from="/splash" to="/" />}
         <Route path="/projects" render={renderPage(Projects)} />
         <Redirect from="/contact" to="/" />
         <Redirect from="/project" to="/projects" />

@@ -41,7 +41,7 @@ function Projects(props) {
           return <ProjectCard repo={repo} theme={theme} key={repo.id} />;
         })}
       </div>
-      <Footer theme={props.theme} onToggle={props.onToggle} />
+      <Footer theme={props.theme} />
     </div>
   );
 }
