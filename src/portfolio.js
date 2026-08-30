@@ -10,7 +10,7 @@ const greeting = {
   headline:
     "Full-stack engineer — real-time trading systems, and the automation that runs them.",
   subTitle:
-    "4+ years building production trading, betting and commerce systems end to end. Five products taken from zero to live at DG3 since Sep 2024, together handling $13M in cumulative volume with a $1M peak day. In parallel I run KAVX, my own ecommerce brand, on an event-sourced agent platform I built that prices, advertises and restocks it unattended.",
+    "4+ years building production trading, betting and commerce systems end to end. Five products taken from zero to live at DG3 since Sep 2024. In parallel I run KAVX, my own ecommerce brand, on an event-sourced agent platform I built that prices, advertises and restocks it unattended.",
   resumeLink: "/Rohit_Baghel_CV.pdf",
   resumeFileName: "Rohit_Baghel_CV.pdf",
   mail: "baghel.rohit99@gmail.com",
@@ -29,7 +29,7 @@ const achievements = {
       id: "kavx-business",
       claim: "Built and sold a real business, engineered end to end.",
       support:
-        "Took KAVX from zero to its first 100 units sold at positive unit margin — every pricing move, ad bid and restock decided by the automation platform I wrote, behind a human approval gate.",
+        "Took KAVX from zero to ₹1.6L in first-month sales at positive unit margin — every pricing move, ad bid and restock decided by the automation platform I wrote, behind a human approval gate.",
     },
     {
       id: "polymarket-bot",
@@ -41,7 +41,7 @@ const achievements = {
       id: "dg3-products",
       claim: "Five production products in under two years.",
       support:
-        "Sole front-end owner across DG3's betting and prediction-market line and backend owner on the newest, moving $13M in cumulative volume with a $1M peak day — including a full Azuro SDK v7 migration across a live sportsbook.",
+        "Sole front-end owner across DG3's betting and prediction-market line and backend owner on the newest — DG3 Sportsbook at 18K+ active users and $25M+ in on-chain betting volume, across multiple chains, plus a full Azuro SDK v7 migration.",
     },
     {
       id: "flipkart-mcp",
@@ -63,12 +63,13 @@ const experience = {
       location: "New Delhi",
       date: "Sep 2024 – Present",
       summary:
-        "Own the front end across five betting and prediction-market products; own front end and backend on the newest. Platform volume: $13M cumulative, $1M peak day.",
+        "Own the front end across five betting and prediction-market products; own front end and backend on the newest.",
       sections: [
         {
-          title: "DG Terminal",
+          title: "DG3 Terminal",
           bullets: [
-            "Built the Next.js / TypeScript / Zustand front end: order book, positions panel, and an \"edge finder\" that surfaces mispriced markets.",
+            "Built the Next.js / TypeScript / Zustand front end: order book, positions panel, and an \"edge finder\" that surfaces mispriced markets — $153K+ in transaction volume in its first 10 days.",
+            "Built terminal-grade semantic search: intent-based orchestration, hierarchical ranking, in-flight request cancellation, keyboard-first navigation.",
             "Built the NestJS + PostgreSQL backend for open-positions, trades and summary APIs, plus background workers for data ingestion and order reconciliation.",
             "Engineered the real-time layer — parallel WebSocket subscriptions per open bucket, price caching, stale-market handling.",
           ],
@@ -82,7 +83,9 @@ const experience = {
         {
           title: "DG3 Sportsbook",
           bullets: [
-            "Primary front-end engineer for on-chain betting on Azuro and Overtime; led the Azuro SDK v7 / toolkit v6 migration; built the fraud-detection system (device fingerprinting, VPN/Tor/incognito detection, Cloudflare-fronted proxy routing, geo signals) and multi-currency wallets with Privy, Glide, Transak and LiFi swaps, extended to Solana and Sui.",
+            "18K+ active users; $25M+ in on-chain betting volume, across multiple chains.",
+            "Primary front-end engineer for on-chain betting on Azuro and Overtime; led the Azuro SDK v7 / toolkit v6 migration; built the fraud-detection system (device fingerprinting, VPN/Tor/incognito detection, Cloudflare-fronted proxy routing, geo signals) and multi-currency wallets with Privy, Glide, Transak, Enclave and LI.FI swaps, extended to Solana and Sui.",
+            "Built a multi-source liquidity aggregation engine unifying liquidity across providers to improve bet-execution reliability.",
           ],
         },
         {
@@ -105,7 +108,7 @@ const experience = {
       summary:
         "Own ecommerce brand on Flipkart, plus the event-sourced automation platform that runs it (~83 commits across a TypeScript monorepo).",
       bullets: [
-        "Reached the first 100 units sold at positive unit margin with pricing, ads, inventory and daily ops running unattended.",
+        "Reached ₹1.6L in first-month sales at positive unit margin with pricing, ads, inventory and daily ops running unattended.",
         "Automation engines: margin-aware bidirectional pricing with a return-aware margin floor and conversion-aware price cuts; SKU-profit ad bid engine with placement bids, search-term/keyword tuning and a conversion-gap guard; inventory as one stock pool allocated across listings (never replicated), Google Sheets two-way sync, IST-correct day bucketing; nightly Telegram digest, shipping-label cropping, daily picking list, scheduled via launchd.",
         "Decision pipeline built to be auditable and reversible: strategies emit ActionSuggested → a human approves → the action lands in a transactional outbox in the same DB transaction → executes with idempotency keys on every marketplace write. Guardrails refuse an approved batch that would oversell a stock pool, and verify the marketplace actually changed before recording success.",
         "Platform: multi-tenant PostgreSQL with row-level security and a withTenant() helper (RLS test suite guards the live tenant), append-only event store with an orders_view projection, money stored in integer minor units, BullMQ workers and node-cron, resilient pagination with 429/5xx retries. TDD throughout with Vitest, Turborepo monorepo, CI on every PR.",
