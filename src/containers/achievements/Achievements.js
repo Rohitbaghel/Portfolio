@@ -2,6 +2,7 @@ import React from "react";
 import "./Achievements.css";
 import Fade from "../../components/Fade/Fade";
 import { achievements } from "../../portfolio";
+import { highlightMetrics } from "../../utils/highlightMetrics";
 
 export default function Achievements(props) {
   const theme = props.theme;
@@ -29,7 +30,7 @@ export default function Achievements(props) {
                 className="achievement-support subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                {item.support}
+                {highlightMetrics(item.support, theme.accentColor)}
               </p>
             </article>
           </Fade>

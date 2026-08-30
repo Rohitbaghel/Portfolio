@@ -5,6 +5,7 @@ import { greeting } from "../../portfolio";
 import Fade from "../../components/Fade/Fade";
 import FeelingProud from "./FeelingProud";
 import { style } from "glamor";
+import { highlightMetrics } from "../../utils/highlightMetrics";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -39,7 +40,7 @@ export default function Greeting(props) {
                 className="greeting-text-p subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                {greeting.subTitle}
+                {highlightMetrics(greeting.subTitle, theme.accentColor)}
               </p>
               <SocialMedia />
               <div className="portfolio-repo-btn-div greeting-actions">

@@ -2,6 +2,7 @@ import React from "react";
 import "./Experience.css";
 import Fade from "../../components/Fade/Fade";
 import { experience } from "../../portfolio";
+import { highlightMetrics } from "../../utils/highlightMetrics";
 
 function CompanyName({ exp, theme }) {
   if (exp.companyUrl) {
@@ -78,7 +79,7 @@ export default function Experience(props) {
                   className="experience-summary subTitle"
                   style={{ color: theme.secondaryText }}
                 >
-                  {exp.summary}
+                  {highlightMetrics(exp.summary, theme.accentColor)}
                 </p>
               )}
               {exp.sections &&
@@ -97,7 +98,7 @@ export default function Experience(props) {
                           className="experience-list-item subTitle"
                           style={{ color: theme.secondaryText }}
                         >
-                          {bullet}
+                          {highlightMetrics(bullet, theme.accentColor)}
                         </li>
                       ))}
                     </ul>
@@ -111,7 +112,7 @@ export default function Experience(props) {
                       className="experience-list-item subTitle"
                       style={{ color: theme.secondaryText }}
                     >
-                      {bullet}
+                      {highlightMetrics(bullet, theme.accentColor)}
                     </li>
                   ))}
                 </ul>
