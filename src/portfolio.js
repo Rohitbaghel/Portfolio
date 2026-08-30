@@ -295,6 +295,7 @@ const projects = {
     {
       id: "newclickbeauty",
       name: "NewClickBeauty (Apr – Aug 2026)",
+      url: "https://newclickbeauty.com/",
       description:
         "Luxury cosmetics storefront: Next.js App Router, Prisma/PostgreSQL, Auth.js email-OTP with USER/ADMIN roles, Zustand cart, PhonePe payments.",
       output:
