@@ -10,7 +10,7 @@ const greeting = {
   headline:
     "Full-stack engineer — real-time trading systems, and the automation that runs them.",
   subTitle:
-    "4+ years building production trading, betting and commerce systems end to end. Five products taken from zero to live at DG3 since Sep 2024 — 18K+ active users, $25M+ in on-chain betting volume across multiple chains, and $153K+ on DG3 Terminal in its first 10 days. In parallel I run KAVX, my own ecommerce brand, on an event-sourced agent platform I built that prices, advertises and restocks it unattended.",
+    "4+ years building production trading, betting and commerce systems end to end. Five products taken from zero to live at DG3 since Sep 2024 — 18K+ active users, $25M+ in on-chain betting volume across multiple chains, and $153K+ on DG3 Terminal in its first 10 days. In parallel I run KAVX, my own ecommerce brand — ₹1.6L in first-month sales — on an event-sourced agent platform I built that prices, advertises and restocks it unattended.",
   resumeLink: "/Rohit_Baghel_CV.pdf",
   resumeFileName: "Rohit_Baghel_CV.pdf",
   mail: "baghel.rohit99@gmail.com",
